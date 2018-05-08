@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mines of Moria Form</title>
+    <script src="formscript.js"></script>
+    <script src="formstyles.css"></script>
+</head>
+<body>
+
+<h1>
+    Mines of Moria Market
+</h1>
+
+<form>
+    <fieldset>
+        <legend>
+            Deliver to
+        </legend>
+        <label>
+            Region:
+            <select name="region" id="selectRegion">
+                <option value="Eriador">Eriador</option>
+                <option value="Gondor">Gondor</option>
+                <option value="Lindon">Lindon</option>
+                <option value="Mordor">Mordor</option>
+                <option value="Rhovanian">Rhovanian</option>
+                <option value="Rohan">Rohan</option>
+            </select>
+        </label>
+        <br/>
+        <label>
+            Location:
+            <select name="location" id="selectLocation">
+                <!-- Eriador -->
+                <option value="Shire">Shire</option>
+                <!-- Gondor -->
+                <option value="Isengard">Isengard</option>
+                <!--Lindon -->
+                <option value="Ossiriand">Ossiriand</option>
+                <!-- Mordor -->
+                <option value="Gorgoroth">Gorgoroth</option>
+                <!-- Rhovanian -->
+                <option value="Erebor">Erebor</option>
+                <!--Rohan -->
+                <option value="Lothlorien">Lothlorien</option>
+            </select>
+        </label>
+        <label>
+            Destination:
+            <input type="text" name="destination" size="30" maxlength="30">
+        </label>
+        <br/>
+        <label>
+            Directions:
+            <textarea rows="5" cols="80">Please give specific directions to desired destination...</textarea>
+        </label>
+    </fieldset>
+    <fieldset>
+        <legend>
+            Items being bought
+        </legend>
+        <table>
+            <thead>
+                <tr>
+                    <th>
+                        Item
+                    </th>
+                    <th>
+                        Quantity
+                    </th>
+                    <th>
+                        Use
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <input type="checkbox" id="lumber" name="material" value="lumber" checked>
+                        <label for="lumber">Lumber</label>
+                    </td>
+                    <td>
+                        <input type="text" name="amount" value="0" size="4">
+                    </td>
+                    <td>
+                        <textarea rows="1" cols="35">Briefly describe intended use</textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" id="steel" name="material" value="steel">
+                        <label for="steel">Steel</label>
+                    </td>
+                    <td>
+                        <input type="text" name="amount" value="0" size="4">
+                    </td>
+                    <td>
+                        <textarea rows="1" cols="35"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" id="rope" name="material" value="rope">
+                        <label for="rope">Rope</label>
+                    </td>
+                    <td>
+                        <input type="text" name="amount" value="0" size="4">
+                    </td>
+                    <td>
+                        <textarea rows="1" cols="35"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" id="portions" name="material" value="portions">
+                        <label for="portions">Portions</label>
+                    </td>
+                    <td>
+                        <input type="text" name="amount" value="0" size="4">
+                    </td>
+                    <td>
+                        <textarea rows="1" cols="35"></textarea>
+                    </td>
+                </tr>
+            <tr>
+                <td>
+                    <br/>
+                    <input type="submit" value="Submit">
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </fieldset>
+    <fieldset>
+        <legend>
+            none
+        </legend>
+    </fieldset>
+</form>
+
+</body>
+</html>
