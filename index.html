@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Mines of Moria Form</title>
-    <script src="formscript.js"></script>
-    <script src="formstyles.css"></script>
+    <title>Middle Earth Market Form</title>
+    <script src="formscript.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="formstyles.css">
 </head>
 <body>
 
 <h1>
-    Mines of Moria Market
+    Middle Earth Market
 </h1>
 
 <form>
@@ -19,7 +19,7 @@
         </legend>
         <label>
             Region:
-            <select name="region" id="selectRegion">
+            <select name="region" id="selectRegion" onchange="handleRegion()">
                 <option value="Eriador">Eriador</option>
                 <option value="Gondor">Gondor</option>
                 <option value="Lindon">Lindon</option>
@@ -32,18 +32,6 @@
         <label>
             Location:
             <select name="location" id="selectLocation">
-                <!-- Eriador -->
-                <option value="Shire">Shire</option>
-                <!-- Gondor -->
-                <option value="Isengard">Isengard</option>
-                <!--Lindon -->
-                <option value="Ossiriand">Ossiriand</option>
-                <!-- Mordor -->
-                <option value="Gorgoroth">Gorgoroth</option>
-                <!-- Rhovanian -->
-                <option value="Erebor">Erebor</option>
-                <!--Rohan -->
-                <option value="Lothlorien">Lothlorien</option>
             </select>
         </label>
         <label>
@@ -113,8 +101,8 @@
                 </tr>
                 <tr>
                     <td>
-                        <input type="checkbox" id="portions" name="material" value="portions">
-                        <label for="portions">Portions</label>
+                        <input type="checkbox" id="food" name="material" value="food">
+                        <label for="food">Food</label>
                     </td>
                     <td>
                         <input type="text" name="amount" value="0" size="4">
