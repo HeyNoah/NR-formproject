@@ -5,6 +5,7 @@
     <title>Middle Earth Market Form</title>
     <script src="formscript.js" defer></script>
     <link rel="stylesheet" type="text/css" href="formstyles.css">
+    <link href='https://fonts.googleapis.com/css?family=Caesar Dressing' rel='stylesheet'>
 </head>
 <body>
 
@@ -20,6 +21,8 @@
         <label>
             Region:
             <select name="region" id="selectRegion" onchange="handleRegion()">
+                <option value="choose" selected>-Choose Region-</option>
+                <option value="Arnor">Arnor</option>
                 <option value="Eriador">Eriador</option>
                 <option value="Gondor">Gondor</option>
                 <option value="Lindon">Lindon</option>
@@ -34,6 +37,7 @@
             <select name="location" id="selectLocation">
             </select>
         </label>
+        <br/>
         <label>
             Destination:
             <input type="text" name="destination" size="30" maxlength="30">
@@ -41,7 +45,7 @@
         <br/>
         <label>
             Directions:
-            <textarea rows="5" cols="80">Please give specific directions to desired destination...</textarea>
+            <textarea rows="5" cols="80" placeholder="Please give specific directions to desired destination..."></textarea>
         </label>
     </fieldset>
     <fieldset>
@@ -69,19 +73,31 @@
                         <label for="lumber">Lumber</label>
                     </td>
                     <td>
-                        <input type="text" name="amount" value="0" size="4">
+                        <input type="text" name="amount" placeholder="In cords" size="5">
                     </td>
                     <td>
-                        <textarea rows="1" cols="35">Briefly describe intended use</textarea>
+                        <textarea rows="1" cols="35" placeholder="Briefly describe intended use"></textarea>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <input type="checkbox" id="steel" name="material" value="steel">
-                        <label for="steel">Steel</label>
+                        <input type="checkbox" id="ore" name="material" value="ore">
+                        <label for="ore">Ore</label>
                     </td>
                     <td>
-                        <input type="text" name="amount" value="0" size="4">
+                        <input type="text" name="amount" placeholder="In tonnes" size="5">
+                    </td>
+                    <td>
+                        <textarea rows="1" cols="35"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" id="clay" name="material" value="clay">
+                        <label for="clay">Clay</label>
+                    </td>
+                    <td>
+                        <input type="text" name="amount" placeholder="In yards&sup3;" size="5">
                     </td>
                     <td>
                         <textarea rows="1" cols="35"></textarea>
@@ -93,7 +109,7 @@
                         <label for="rope">Rope</label>
                     </td>
                     <td>
-                        <input type="text" name="amount" value="0" size="4">
+                        <input type="text" name="amount" placeholder="In yards" size="5">
                     </td>
                     <td>
                         <textarea rows="1" cols="35"></textarea>
@@ -105,7 +121,7 @@
                         <label for="food">Food</label>
                     </td>
                     <td>
-                        <input type="text" name="amount" value="0" size="4">
+                        <input type="text" name="amount" placeholder="In portions" size="5">
                     </td>
                     <td>
                         <textarea rows="1" cols="35"></textarea>
@@ -122,10 +138,32 @@
     </fieldset>
     <fieldset>
         <legend>
-            none
+            Date
         </legend>
+        <script type="text/javascript">
+            var today = new Date();
+            today.getFullYear();
+            today.getMonth();
+            today.getDay();
+            document.write(" <p> Today's date is: " + today + " . </p>");
+        </script>
     </fieldset>
 </form>
+
+<!--<script type="text/javascript">-->
+    <!--var today = new Date();-->
+    <!--var myBdate = new Date();-->
+    <!--var difference;-->
+    <!--myBdate.setFullYear(2001);-->
+    <!--myBdate.setMonth(5);-->
+    <!--myBdate.setDate(20);-->
+    <!--myBdate.setHours(16);-->
+    <!--myBdate.setMinutes(0);-->
+    <!--myBdate.setSeconds(0);-->
+    <!--difference = today.getTime() - myBdate.getTime();-->
+    <!--difference = Math.floor(difference / 1000);-->
+    <!--document.write(" <p style='text-align:center'> My age: " + difference + " seconds </p>");-->
+<!--</script>-->
 
 </body>
 </html>

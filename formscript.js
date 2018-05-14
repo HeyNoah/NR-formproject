@@ -1,41 +1,43 @@
-var Locations = [];
+
+var ArnorLocs = ["Weather Hills", "Ettenmoors", "Rivendell", "Amun Sul", "Fornost", "Carn Dum"];
+var EriadorLocs = ["Shire", "Breeland", "Angmar", "Trollshaws", "Tharbad", "Sarn Ford", "Eryn Vorn"];
+var GondorLocs = ["Isengard", "Minas Tirith", "Dol Amroth", "Osgiliath", "Belfalas", "Edhellond", "Pinnath Gelin"];
+var LindonLocs = ["Ossiriand", "Harlond", "Forlond", "Mithlond", "Himling"];
+var MordorLocs = ["Gorgoroth", "Barad Dur", "Durthang", "Narchost", "Nurn", "Orodruin(Mount Doom)"];
+var RhovanianLocs = ["Erebor", "Dale", "Dol Guldur", "Fangorn", "Elvenking's Halls"];
+var RohanLocs = ["Lothlorien", "Edoras", "Aldburg", "Upbourn", "Grimslade", "Helms Deep"];
+
 var LocationSelect = document.getElementById("selectLocation");
-var EriadorLocs = ["Shire", "Breeland", "Angmar", "Trollshaws"];
-var GondorLocs = ["Isengard", "Minas Tirith", "Dol Amroth", "Osgiliath", "Helms Deep"];
-var LindonLocs = ["Ossiriand", "Harlond", "Forlond"];
-var MordorLocs = ["Gorgoroth", "Barad Dur", "Durthang", "Narchost"];
-var RhovanianLocs = ["Erebor", "Dale", "Dol Guldur", "Fangorn"];
-var RohanLocs = ["Lothlorien", "Edoras", "Aldburg", "Upbourn", "Grimslade"];
-var newOption = [];
+var Locations = [];
 
-// function clearSelects() {
-
-// }
-// clearSelects();
-
-function handleRegion() {
-    var theRegion = document.getElementById("selectRegion").value;
-    // var theLocation = document.getElementById("selectLocation").value;
-
+function clearSelects() {
     while (LocationSelect.length > 0) {
         LocationSelect.remove(0);
     }
-    while (newOption.length > 0) {
-        newOption.remove(0);
-    }
+
+}
+
+function handleRegion() {
+    var theRegion = document.getElementById("selectRegion").value;
+ //   var LocationSelect = document.getElementById("selectLocation");
+
+   clearSelects();
+   var newOption = [];
 
     if (theRegion==="Eriador") {
-        Locations = EriadorLocs;
+        Locations = EriadorLocs.slice();
     } else if (theRegion==="Gondor"){
-        Locations = GondorLocs;
+        Locations = GondorLocs.slice();
     } else if (theRegion==="Lindon") {
-        Locations = LindonLocs;
+        Locations = LindonLocs.slice();
     } else if (theRegion==="Mordor") {
-        Locations = MordorLocs;
+        Locations = MordorLocs.slice();
     } else if (theRegion==="Rhovanian") {
-        Locations = RhovanianLocs;
+        Locations = RhovanianLocs.slice();
     } else if (theRegion==="Rohan") {
-        Locations = RohanLocs;
+        Locations = RohanLocs.slice();
+    } else if (theRegion==="Arnor") {
+        Locations = ArnorLocs.slice();
     }
     for (var i=0; i<Locations.length; i++) {
         newOption[i] = document.createElement("option");
@@ -43,3 +45,5 @@ function handleRegion() {
         LocationSelect.add(newOption[i]);
     }
 }
+
+
