@@ -14,7 +14,17 @@
 </h1>
 
 <form>
-    <fieldset>
+    <fieldset id="date">
+        <legend>
+            Date
+        </legend>
+        <script type="text/javascript">
+            var today = new Date();
+            var dateOutput = today.toLocaleString();
+            document.write("<p> Today's date is: " + dateOutput + " </p>")
+        </script>
+    </fieldset>
+    <fieldset id="place">
         <legend>
             Deliver to
         </legend>
@@ -48,7 +58,7 @@
             <textarea rows="5" cols="80" placeholder="Please give specific directions to desired destination..."></textarea>
         </label>
     </fieldset>
-    <fieldset>
+    <fieldset id="store">
         <legend>
             Items being bought
         </legend>
@@ -136,34 +146,7 @@
             </tbody>
         </table>
     </fieldset>
-    <fieldset>
-        <legend>
-            Date
-        </legend>
-        <script type="text/javascript">
-            var today = new Date();
-            today.getFullYear();
-            today.getMonth();
-            today.getDay();
-            document.write(" <p> Today's date is: " + today + " . </p>");
-        </script>
-    </fieldset>
 </form>
-
-<!--<script type="text/javascript">-->
-    <!--var today = new Date();-->
-    <!--var myBdate = new Date();-->
-    <!--var difference;-->
-    <!--myBdate.setFullYear(2001);-->
-    <!--myBdate.setMonth(5);-->
-    <!--myBdate.setDate(20);-->
-    <!--myBdate.setHours(16);-->
-    <!--myBdate.setMinutes(0);-->
-    <!--myBdate.setSeconds(0);-->
-    <!--difference = today.getTime() - myBdate.getTime();-->
-    <!--difference = Math.floor(difference / 1000);-->
-    <!--document.write(" <p style='text-align:center'> My age: " + difference + " seconds </p>");-->
-<!--</script>-->
 
 </body>
 </html>
