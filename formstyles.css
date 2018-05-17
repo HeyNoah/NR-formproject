@@ -29,7 +29,15 @@ input {
 
 }
 
+caption {
+    font-family: 'Caesar Dressing', serif;
+}
+
 fieldset#date {
     float: right;
     margin-top: -78px;
+}
+
+.clear {
+    clear: both;
 }

@@ -24,7 +24,7 @@
             document.write("<p> Today's date is: " + dateOutput + " </p>")
         </script>
     </fieldset>
-    <fieldset id="place">
+    <fieldset id="place" class="clear">
         <legend>
             Deliver to
         </legend>
@@ -62,7 +62,7 @@
         <legend>
             Items being bought
         </legend>
-        <table>
+        <table id="itemsTable">
             <thead>
                 <tr>
                     <th>
@@ -74,6 +74,12 @@
                     <th>
                         Use
                     </th>
+                    <th>
+                        Price
+                    </th>
+                    <th>
+                        Subtotal
+                    </th>
                 </tr>
             </thead>
             <tbody>
@@ -83,10 +89,16 @@
                         <label for="lumber">Lumber</label>
                     </td>
                     <td>
-                        <input type="text" name="amount" placeholder="In cords" size="5">
+                        <input type="number" name="amount" placeholder="In cords" size="5" onchange="updatePrices()">
                     </td>
                     <td>
                         <textarea rows="1" cols="35" placeholder="Briefly describe intended use"></textarea>
+                    </td>
+                    <td>
+                        &pound;5
+                    </td>
+                    <td>
+
                     </td>
                 </tr>
                 <tr>
@@ -95,10 +107,52 @@
                         <label for="ore">Ore</label>
                     </td>
                     <td>
-                        <input type="text" name="amount" placeholder="In tonnes" size="5">
+                        <input type="number" name="amount" placeholder="In tonnes" size="5" onchange="updatePrices()">
                     </td>
                     <td>
                         <textarea rows="1" cols="35"></textarea>
+                    </td>
+                    <td>
+                        &pound;7
+                    </td>
+                    <td>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" id="iron" name="material" value="iron">
+                        <label for="iron">Iron</label>
+                    </td>
+                    <td>
+                        <input type="number" name="amount" placeholder="In tonnes" size="5" onchange="updatePrices()">
+                    </td>
+                    <td>
+                        <textarea rows="1" cols="35"></textarea>
+                    </td>
+                    <td>
+                        &pound;10
+                    </td>
+                    <td>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" id="coal" name="material" value="coal">
+                        <label for="coal">Coal</label>
+                    </td>
+                    <td>
+                        <input type="number" name="amount" placeholder="In lbs" size="5" onchange="updatePrices()">
+                    </td>
+                    <td>
+                        <textarea rows="1" cols="35"></textarea>
+                    </td>
+                    <td>
+                        &pound;3
+                    </td>
+                    <td>
+
                     </td>
                 </tr>
                 <tr>
@@ -107,10 +161,16 @@
                         <label for="clay">Clay</label>
                     </td>
                     <td>
-                        <input type="text" name="amount" placeholder="In yards&sup3;" size="5">
+                        <input type="number" name="amount" placeholder="In yards&sup3;" size="5" onchange="updatePrices()">
                     </td>
                     <td>
                         <textarea rows="1" cols="35"></textarea>
+                    </td>
+                    <td>
+                        &pound;3
+                    </td>
+                    <td>
+
                     </td>
                 </tr>
                 <tr>
@@ -119,10 +179,16 @@
                         <label for="rope">Rope</label>
                     </td>
                     <td>
-                        <input type="text" name="amount" placeholder="In yards" size="5">
+                        <input type="number" name="amount" placeholder="In yards" size="5" onchange="updatePrices()">
                     </td>
                     <td>
                         <textarea rows="1" cols="35"></textarea>
+                    </td>
+                    <td>
+                        &pound;2
+                    </td>
+                    <td>
+
                     </td>
                 </tr>
                 <tr>
@@ -131,19 +197,38 @@
                         <label for="food">Food</label>
                     </td>
                     <td>
-                        <input type="text" name="amount" placeholder="In portions" size="5">
+                        <input type="number" name="amount" placeholder="In portions" size="5" onchange="updatePrices()">
                     </td>
                     <td>
                         <textarea rows="1" cols="35"></textarea>
                     </td>
+                    <td>
+                        &pound;4
+                    </td>
+                    <td>
+
+                    </td>
                 </tr>
+            </tbody>
+        </table>
+        <table>
+            <tfoot>
             <tr>
                 <td>
                     <br/>
-                    <input type="submit" value="Submit">
+                    <label>Approved by superior:</label>
+                    <input type="radio" id="approveYes" name="approve" value="approve">
+                    <label for="approveYes">Yes</label>
+                    <input type="radio" id="approveNo" name="approve" value="approve">
+                    <label for="approveNo">No</label>
                 </td>
             </tr>
-            </tbody>
+                <tr>
+                    <td>
+                        <input type="submit" value="Submit">
+                    </td>
+                </tr>
+            </tfoot>
         </table>
     </fieldset>
 </form>
