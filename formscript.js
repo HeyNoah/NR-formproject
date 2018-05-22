@@ -47,8 +47,19 @@ function handleRegion() {
 }
 
 function updatePrices() {
-    var Lumber = 5;
     var theTable = document.getElementById("itemsTable");
     console.log(theTable);
-    theTable.rows[1].cells[4].innerHTML = theTable.rows[1].cells[1] * theTable.rows[1].cells[3].toString();
+
+
+    for(var row = 0; row<8; row++) {
+        for(var cell = 0; cell<5; cell++) {
+
+            console.log("Row " + row + " Cell " + cell + ": " + theTable.rows[row].children.value);
+        }
+    }
+
+
+    //
+    // console.log(parseFloat(theTable.rows[1].cells[1].value));
+    // theTable.rows[1].cells[4].innerHTML = parseFloat(theTable.rows[1].cells[1].value) * parseFloat(theTable.rows[1].cells[3].value);
 }
