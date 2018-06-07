@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="formstyles.css">
     <link href='https://fonts.googleapis.com/css?family=Caesar Dressing' rel='stylesheet'>
 </head>
-<body>
+<body onLoad="InitPage()">
 
 <h1>
     Middle Earth Market
@@ -65,148 +65,153 @@
         <table id="itemsTable">
             <thead>
                 <tr>
-                    <th>
+                    <th width="3%">
                         Item
                     </th>
-                    <th>
+                    <th width="10%">
                         Quantity
                     </th>
-                    <th>
-                        Use
+                    <th width="30%">
+                        Description of Use
                     </th>
-                    <th>
+                    <th width="10%">
                         Price
                     </th>
-                    <th>
+                    <th width="10%">
                         Subtotal
                     </th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>
-                        <input type="checkbox" id="lumber" name="material" value="lumber" checked>
+                    <td style="display:inline-block">
                         <label for="lumber">Lumber</label>
+                        <input type="checkbox" id="lumber" name="material" value="lumber" checked>
                     </td>
                     <td>
-                        <input type="number" name="amount" placeholder="In cords" size="5" onchange="updatePrices()">
+                        <input id="lumberQuantity" type="number" name="amount" placeholder="In cords" size="5" onchange="updatePrices()">
                     </td>
                     <td>
-                        <textarea rows="1" cols="35" placeholder="Briefly describe intended use"></textarea>
+                        <input id="lumberDesc" type="text" placeholder="Briefly describe use">
                     </td>
                     <td>
-                        5
+                        <input id="lumberPrice" type="number" value="5" readonly>
                     </td>
                     <td>
-
+                        <input id="lumberSub" type="number" readonly>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <input type="checkbox" id="ore" name="material" value="ore">
                         <label for="ore">Ore</label>
+                        <input type="checkbox" id="ore" name="material" value="ore">
                     </td>
                     <td>
-                        <input type="number" name="amount" placeholder="In tonnes" size="5" onchange="updatePrices()">
+                        <input id="oreQuantity" type="number" name="amount" placeholder="In tonnes" size="5" onchange="updatePrices()">
                     </td>
                     <td>
-                        <textarea rows="1" cols="35"></textarea>
+                        <input id="oreDesc" type="text" placeholder="Briefly describe use">
                     </td>
                     <td>
-                        7
+                        <input id="orePrice" type="number" value="7" readonly>
                     </td>
                     <td>
-
+                        <input id="oreSub" type="number" readonly>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <input type="checkbox" id="iron" name="material" value="iron">
                         <label for="iron">Iron</label>
+                        <input type="checkbox" id="iron" name="material" value="iron">
                     </td>
                     <td>
-                        <input type="number" name="amount" placeholder="In tonnes" size="5" onchange="updatePrices()">
+                        <input id="ironQuantity" type="number" name="amount" placeholder="In tonnes" size="5" onchange="updatePrices()">
                     </td>
                     <td>
-                        <textarea rows="1" cols="35"></textarea>
+                        <input id="ironDesc" type="text" placeholder="Briefly describe use">
                     </td>
                     <td>
-                        10
+                        <input id="ironPrice" type="number" value="10" readonly>
                     </td>
                     <td>
-
+                        <input id="ironSub" type="number" readonly>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <input type="checkbox" id="coal" name="material" value="coal">
                         <label for="coal">Coal</label>
+                        <input type="checkbox" id="coal" name="material" value="coal">
                     </td>
                     <td>
-                        <input type="number" name="amount" placeholder="In lbs" size="5" onchange="updatePrices()">
+                        <input id="coalQuantity" type="number" name="amount" placeholder="In lbs" size="5" onchange="updatePrices()">
                     </td>
                     <td>
-                        <textarea rows="1" cols="35"></textarea>
+                        <input id="coalDesc" type="text" placeholder="Briefly describe use">
                     </td>
                     <td>
-                        3
+                        <input id="coalPrice" type="number" value="3" readonly>
                     </td>
                     <td>
-
+                        <input id="coalSub" type="number" readonly>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <input type="checkbox" id="clay" name="material" value="clay">
                         <label for="clay">Clay</label>
+                        <input type="checkbox" id="clay" name="material" value="clay">
                     </td>
                     <td>
-                        <input type="number" name="amount" placeholder="In yards&sup3;" size="5" onchange="updatePrices()">
+                        <input id="clayQuantity" type="number" name="amount" placeholder="In yards&sup3;" size="5" onchange="updatePrices()">
                     </td>
                     <td>
-                        <textarea rows="1" cols="35"></textarea>
+                        <input id="clayDesc" type="text" placeholder="Briefly describe use">
                     </td>
                     <td>
-                        3
+                        <input id="clayPrice" type="number" value="3" readonly>
                     </td>
                     <td>
-
+                        <input id="claySub" type="number" readonly>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <input type="checkbox" id="rope" name="material" value="rope">
                         <label for="rope">Rope</label>
+                        <input type="checkbox" id="rope" name="material" value="rope">
                     </td>
                     <td>
-                        <input type="number" name="amount" placeholder="In yards" size="5" onchange="updatePrices()">
+                        <input id="ropeQuantity" type="number" name="amount" placeholder="In yards" size="5" onchange="updatePrices()">
                     </td>
                     <td>
-                        <textarea rows="1" cols="35"></textarea>
+                        <input id="ropeDesc" type="text" placeholder="Briefly describe use">
                     </td>
                     <td>
-                        2
+                        <input id="ropePrice" type="number" value="2" readonly>
                     </td>
                     <td>
-
+                        <input id="ropeSub" type="number" readonly>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <input type="checkbox" id="food" name="material" value="food">
                         <label for="food">Food</label>
+                        <input type="checkbox" id="food" name="material" value="food">
                     </td>
                     <td>
-                        <input type="number" name="amount" placeholder="In portions" size="5" onchange="updatePrices()">
+                        <input id="foodQuantity" type="number" name="amount" placeholder="In portions" size="20" onchange="updatePrices()">
                     </td>
                     <td>
-                        <textarea rows="1" cols="35"></textarea>
+                        <input id="foodDesc" type="text" placeholder="Briefly describe use">
                     </td>
                     <td>
-                        4
+                        <input id="foodPrice" type="number" value="4" readonly>
                     </td>
                     <td>
-
+                        <input id="foodSub" type="number" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <strong>Total: </strong><input id="total" type="number" readonly>
                     </td>
                 </tr>
             </tbody>

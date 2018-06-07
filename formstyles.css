@@ -13,6 +13,10 @@ legend {
     font-family: 'Caesar Dressing', serif;
 }
 
+table {
+    table-layout: fixed;
+}
+
 select {
 
 }
@@ -26,6 +30,20 @@ textarea {
 }
 
 input {
+    box-sizing: border-box;
+}
+
+input label{
+    display: inline;
+}
+
+table input {
+    width: 100%;
+    margin: 1vw;
+}
+
+table tr td {
+    padding: 1vw;
 
 }
 
@@ -41,3 +59,4 @@ fieldset#date {
 .clear {
     clear: both;
 }
+
